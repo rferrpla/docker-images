@@ -41,5 +41,3 @@ RUN echo Verifying install ... \
   && echo javac --version && javac --version \
   && echo java --version && java --version \
   && echo Complete.
-
-CMD ["jshell"]
