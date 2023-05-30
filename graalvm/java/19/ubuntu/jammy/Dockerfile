@@ -14,7 +14,7 @@ RUN apt-get update && \
 RUN set -eux; \
     ARCH="$(dpkg --print-architecture)"; \
     case "${ARCH}" in \
-        aarch64) \
+        arm64|aarch64) \
             ESUM="95b0d0b1bf7e586695d8cf595df7a532b25314745397bb3d044cd00c409f6a0d"; \
             REMOTE_URL="https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.3.1/graalvm-ce-java19-linux-aarch64-22.3.1.tar.gz"; \
             ;; \
