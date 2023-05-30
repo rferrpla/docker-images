@@ -3,10 +3,7 @@ FROM ubuntu:22.04
 ENV JAVA_HOME /graalvm
 ENV PATH $JAVA_HOME/bin:$PATH
 
-# Default to UTF-8 file.encoding
-ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
-
-RUN apt-get update && \
+RUN apt-get update -y && \
     apt-get install -y --no-install-recommends ca-certificates build-essential zlib1g-dev wget && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists
